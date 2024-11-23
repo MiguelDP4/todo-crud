@@ -1,19 +1,13 @@
-import bodyParser from 'body-parser'
-import express from 'express'
-import cors from 'cors'
+import express from "express";
+import productRoutes from "./routes/product";
 
-const app = express()
+const app = express();
+app.use(express.json());
 
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
-app.use(cors())
+app.use("/api/products", productRoutes);
 
-app.get('/', (_, res) => {
-  return res.json({ ok: true })
-})
+const PORT = process.env.PORT || 3000;
 
-const port = process.env.PORT || 5001
-
-app.listen(port, () => {
-  console.log(`Server API running on http://localhost:${port}`)
-})
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

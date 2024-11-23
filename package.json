@@ -13,14 +13,20 @@
     "@commitlint/cli": "19.4.0",
     "@commitlint/config-conventional": "19.2.2",
     "@commitlint/types": "^19.0.3",
+    "@types/node": "^22.9.3",
     "eslint": "8.57.0",
     "husky": "9.1.5",
     "prettier": "3.3.2",
-    "turbo": "2.0.14"
+    "ts-node": "^10.9.2",
+    "turbo": "2.0.14",
+    "typescript": "^5.3.3"
   },
   "volta": {
     "node": "20.17.0",
     "pnpm ": "9.8.0"
   },
-  "packageManager": "pnpm@9.0.0"
+  "packageManager": "pnpm@9.0.0",
+  "dependencies": {
+    "@types/express-serve-static-core": "^5.0.1"
+  }
 }
